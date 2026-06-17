@@ -1,5 +1,7 @@
 # OMAR-TOP
 
+![alt text](screenshot.png)
+
 A lightweight TUI resource monitor for Linux, built with Go and Bubble Tea. Designed for [Omarchy](https://omarchy.org/) — automatically follows the active Omarchy theme colors.
 
 ## Features
