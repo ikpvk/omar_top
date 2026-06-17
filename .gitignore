@@ -1,0 +1,5 @@
+omar_top
+*.exe
+*.test
+*.out
+__debug_bin*
