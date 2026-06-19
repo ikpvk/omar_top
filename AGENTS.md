@@ -29,7 +29,7 @@ omar_top/
 ├── model.go      Bubble Tea model: state, metrics struct, ticker, delta collectors
 ├── update.go     Message dispatch: tick, resize, keypress, theme reload
 ├── view.go       UI rendering: header, divider, 5 metric sections
-├── format.go     Human-readable formatting: bytes, speed, freq, temp, percent
+├── format.go     Human-readable formatting: binary (KiB/GiB) for storage, decimal (MB/s) for network, freq, temp, percent
 ├── cpu.go        Reads /proc/stat + /sys/devices/system/cpu/ + thermal
 ├── gpu.go        Auto-detects NVIDIA/AMD/Intel; uses nvidia-smi or sysfs
 ├── memory.go     Reads /proc/meminfo
@@ -92,6 +92,7 @@ All collectors read from the Linux `/proc` and `/sys` filesystems — zero exter
 - `/proc/net/dev` — RX/TX byte counters per interface
 - Tracks deltas across ticks for bytes/s rate
 - Auto-selects interface with highest traffic, skips loopback
+- Speeds displayed in decimal units (kB/s, MB/s, GB/s)
 
 ## Config (`~/.config/omar_top/config.toml`)
 

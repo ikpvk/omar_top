@@ -84,7 +84,7 @@ func readCPUFreq() float64 {
 		return 0
 	}
 	mhz, _ := strconv.ParseFloat(strings.TrimSpace(string(f)), 64)
-	return mhz
+	return mhz / 1000
 }
 
 func readCPUTemp() float64 {
