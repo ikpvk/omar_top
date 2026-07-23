@@ -10,7 +10,7 @@ A lightweight TUI resource monitor for Linux, built with Go and Bubble Tea. Desi
 - **GPU** — auto-detects NVIDIA (nvidia-smi), AMD, and Intel; usage + temp + VRAM
 - **Memory** — used / total with available %
 - **Disk** — physical filesystem usage
-- **Network** — real-time down/up speeds (MB/s)
+- **Network** — real-time down/up speeds (kB/s, MB/s, GB/s+), 64-bit counter wraparound safe
 - **Omarchy theme integration** — colors match the current desktop theme, updates live on theme change
 
 ## Installation

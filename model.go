@@ -155,6 +155,9 @@ func (m *model) collectNetMetrics() {
 		if !ok {
 			continue
 		}
+		if cur.rxBytes < prev.rxBytes || cur.txBytes < prev.txBytes {
+			continue
+		}
 		rx := float64(cur.rxBytes-prev.rxBytes) / elapsed
 		tx := float64(cur.txBytes-prev.txBytes) / elapsed
 		if rx+tx > bestSpeed {
